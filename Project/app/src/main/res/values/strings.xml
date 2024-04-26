@@ -6,8 +6,16 @@
     <string name="second_fragment_label">Public Restrooms</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
-    <string name="resources"> resources</string>
-
+    <string name="resources">resources</string>
+    <string name="location">location</string>
+    <string name="status">status</string>
+    <string name="mapbutton">map</string>
+    <string name="street">street</string>
+    <string name="description">description</string>
+    <string name="contact">contact</string>
+    <string name="emergency">emergency</string>
+    <string name="Discounts">discounts</string>
+    <string name="HomeLessAid">Homeless Aid</string>
     <string name="mapIntro">This is a map of local public restrooms.</string>
     <string name="lorem_ipsum">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris
@@ -45,4 +53,6 @@
         libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus
         vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
     </string>
+    <string name="Shelters">Shelters</string>
+    <string name="Restrooms">Restrooms\n</string>
 </resources>
