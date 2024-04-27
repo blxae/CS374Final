@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ScrollingFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+
+        <TextView android:text="@string/cvsdiscounts"
+            android:id="@+id/textView1"
+            android:background="@color/bubbleBackground"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/text_margin">
+        </TextView>
+
+        <TextView android:text="@string/targetdiscounts"
+            android:id="@+id/textView2"
+            android:background="@color/bubbleBackground"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/text_margin">
+        </TextView>
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/view">
+
+        </Button>
+
+
+    </LinearLayout>
+
+
+</ScrollView>
+

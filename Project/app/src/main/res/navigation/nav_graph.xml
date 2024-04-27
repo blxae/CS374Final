@@ -14,6 +14,9 @@
         <action
             android:id="@+id/action_FirstFragment_to_SecondFragment"
             app:destination="@id/SecondFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_ScrollingFragment"
+            app:destination="@id/ScrollingFragment" />
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"
@@ -23,6 +26,16 @@
 
         <action
             android:id="@+id/action_SecondFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ScrollingFragment"
+        android:name="com.example.finalproject.ScrollingFragment"
+        android:label="@string/third_fragment_label"
+        tools:layout="@layout/fragment_discount">
+
+        <action
+            android:id="@+id/action_ScrollingFragment_to_FirstFragment"
             app:destination="@id/FirstFragment" />
     </fragment>
 </navigation>
