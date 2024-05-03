@@ -67,6 +67,10 @@
         "Looking for a healthy breakfast option for the whole family? From now until June 1st, when
         you buy one box of oatmeal, get the second one FREE!\n"
     </string>
+    <string name="sevenelevendiscounts">
+        "7-11: 15% off water cases\n"
+        "This deal applies with a purchase of $10 or more. Get Dasani or Aquafina water cases 15% off!"
+    </string>
     <string name="textView1">TextView1</string>
     <string name="textView2">TextView2</string>
     <string name="textView3">TextView3</string>
