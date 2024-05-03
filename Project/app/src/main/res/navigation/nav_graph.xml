@@ -17,6 +17,9 @@
         <action
             android:id="@+id/action_FirstFragment_to_ScrollingFragment"
             app:destination="@id/ScrollingFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_LoginFragment"
+            app:destination="@id/LoginFragment" />
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"
@@ -38,4 +41,16 @@
             android:id="@+id/action_ScrollingFragment_to_FirstFragment"
             app:destination="@id/FirstFragment" />
     </fragment>
+
+    <fragment
+        android:id="@+id/LoginFragment"
+        android:name="com.example.finalproject.LoginFragment"
+        android:label="@string/login_fragment_label"
+        tools:layout="@layout/fragment_login">
+
+        <action
+            android:id="@+id/action_LoginFragment_to_EditFragment"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+
 </navigation>
