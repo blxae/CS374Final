@@ -28,6 +28,9 @@ android {
             )
         }
     }
+    buildFeatures {
+        compose = true
+    }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
@@ -35,12 +38,22 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    composeOptions{
+        kotlinCompilerExtensionVersion = "1.5.2"
+    }
     buildFeatures {
         viewBinding = true
     }
 }
 
 dependencies {
+
+    implementation(libs.androidx.material3.android)
+    val composeBom = platform("androidx.compose:compose-bom:2024.04.01")
+    implementation(composeBom)
+    androidTestImplementation(composeBom)
+
+    implementation("androidx.compose.material3:material3")
 
     implementation(platform("com.google.firebase:firebase-bom:32.8.1"))
     implementation("com.google.firebase:firebase-auth")

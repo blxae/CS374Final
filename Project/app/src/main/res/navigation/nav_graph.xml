@@ -50,6 +50,17 @@
 
         <action
             android:id="@+id/action_LoginFragment_to_EditFragment"
+            app:destination="@id/EditFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/EditFragment"
+        android:name="com.example.finalproject.EditFragment"
+        android:label="@string/edit_fragment_label"
+        tools:layout="@layout/fragment_edit">
+
+        <action
+            android:id="@+id/action_EditFragment_to_MainFragment"
             app:destination="@id/FirstFragment" />
     </fragment>
 
