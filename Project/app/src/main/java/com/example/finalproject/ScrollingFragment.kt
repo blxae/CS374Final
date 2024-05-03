@@ -17,6 +17,9 @@ import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
+import android.content.Intent
+import android.net.Uri
+import androidx.appcompat.app.AppCompatActivity
 
 
 /**
@@ -47,7 +50,9 @@ class ScrollingFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-
+        binding.textView1.setOnClickListener {
+            openCVS()
+        }
 
 
         binding.button1.setOnClickListener {
@@ -55,8 +60,17 @@ class ScrollingFragment : Fragment() {
         }
     }
 
+    private fun openCVS() {
+        val url = "https://www.cvs.com"
+        val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+        startActivity(intent)
+    }
+
+
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }
+
+
 }
