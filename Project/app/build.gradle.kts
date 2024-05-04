@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
     id("com.google.gms.google-services")
+    alias(libs.plugins.googleAndroidLibrariesMapsplatformSecretsGradlePlugin)
 }
 
 android {
@@ -49,6 +50,7 @@ android {
 dependencies {
 
     implementation(libs.androidx.material3.android)
+    implementation(libs.play.services.maps)
     val composeBom = platform("androidx.compose:compose-bom:2024.04.01")
     implementation(composeBom)
     androidTestImplementation(composeBom)
