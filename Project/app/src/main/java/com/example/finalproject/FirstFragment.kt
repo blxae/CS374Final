@@ -60,6 +60,7 @@ class FirstFragment : Fragment() {
             Text(
                 text = "Homeless Aid NYC",
                 style = MaterialTheme.typography.headlineMedium
+
             )
             Button(
                 onClick = {

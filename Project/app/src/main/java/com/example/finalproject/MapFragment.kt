@@ -1,4 +1,5 @@
 package com.example.finalproject
+
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
@@ -6,7 +7,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.compose.foundation.background
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -24,10 +24,8 @@ import androidx.compose.ui.platform.ComposeView
 import androidx.compose.ui.unit.dp
 import androidx.fragment.app.Fragment
 
-/**
- * A simple [Fragment] subclass as the second destination in the navigation.
- */
-class SecondFragment : Fragment() {
+
+class MapFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -50,14 +48,32 @@ class SecondFragment : Fragment() {
     @Composable
     fun ScrollingScreen(){
         val titles = listOf(
-            "NYC Homeless or At-Risk of Homelessness Emergency Call Line",
-            "NYC Department of Homeless Services (DHS) within Department of Social Services"
+            "Imagination Playground Public Restroom",
+            "The Battery Public Restroom",
+            "Washington Market Park Public Restroom",
+            "Columbus Park Pavilion",
+            "Washington Square Park Public Restroom",
+            "McKinley Playground Public Restroom",
+            "Seward Park Public Restroom",
+            "Little Flower Playground Public Restroom",
+            "Downing Street Playground Public Restroom",
+            "Brian Watkins Tennis Center Public Restroom",
+
         )
 
-        val numbers = listOf(
-            "Call 311",
-            "https://www.nyc.gov/site/dhs/index.page"
+        val descriptions = listOf(
+            "165 JOHN STREET",
+            "Battery Pl. & Washington St.",
+            "Greenwich St. & Chambers St.",
+            "Bayard Street between Baxter and Mulberry Streets",
+            "5 Avenue, Waverly Place, West 4 & MacDougal Streets.",
+            "Avenue A, East 3-East 4 Streets",
+            "Jefferson & Canal Streets",
+            "Madison Street opposite Jefferson Street",
+            "Downing to Carmine Streets, Avenue of the Americas",
+            "East River Park at Broome Street",
         )
+
 
         LazyColumn(
             modifier = Modifier
@@ -82,16 +98,10 @@ class SecondFragment : Fragment() {
                         color = primaryLight,
                     )
                     Text(
-                        text = numbers[index],
+                        text = descriptions[index],
                         style = MaterialTheme.typography.bodySmall,
                         color = primaryLight,
                         modifier = Modifier
-                            .background(
-                                color = primaryDark,
-                                shape = RoundedCornerShape(20.dp)
-                            )
-                            .clickable { openUrl(numbers[index]) }
-                            .padding(8.dp)
                     )
                 }
                 Spacer(modifier = Modifier
@@ -109,3 +119,5 @@ class SecondFragment : Fragment() {
         startActivity(intent)
     }
 }
+
+

@@ -26,6 +26,7 @@
         <action
             android:id="@+id/action_FirstFragment_to_MapFragment"
             app:destination="@id/MapFragment" />
+
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"
@@ -81,12 +82,12 @@
     </fragment>
     <fragment
         android:id="@+id/MapFragment"
-        android:name="com.example.finalproject.BathroomFragment"
+        android:name="com.example.finalproject.MapFragment"
         android:label="@string/map_fragment_label"
-        tools:layout="@layout/fragment_bathroom">
+        tools:layout="@layout/fragment_map">
 
         <action
-            android:id="@+id/action_Map_Fragment_to_MainFragment"
+            android:id="@+id/action_MapFragment_to_MainFragment"
             app:destination="@id/FirstFragment" />
     </fragment>
 
