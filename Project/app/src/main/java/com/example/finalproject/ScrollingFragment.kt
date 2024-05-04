@@ -5,11 +5,16 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -33,6 +38,10 @@ class ScrollingFragment : Fragment() {
             }
         }
     }
+
+
+
+
 
 
     @Composable
@@ -77,22 +86,43 @@ class ScrollingFragment : Fragment() {
         )
 
         LazyColumn(
-            modifier = Modifier.fillMaxSize(),
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(8.dp),
         ) {
             items(titles) { title ->
                 val index = titles.indexOf(title)
-                Text(
-                    text = title,
-                    style = MaterialTheme.typography.headlineMedium,
-                    modifier = Modifier.padding(8.dp)
-                )
-                Text(
-                    text = descriptions[index],
-                    style = MaterialTheme.typography.bodySmall,
+
+                Column(
                     modifier = Modifier
-                        .padding(8.dp)
-                        .clickable { openUrl(links[index]) }
-                        .padding(8.dp)
+                        .background(
+                            color = primaryContainerLight,
+                            shape = RoundedCornerShape(20.dp)
+                        )
+                        .padding(10.dp)
+                ) {
+                    Text(
+                        text = title,
+                        style = MaterialTheme.typography.bodyLarge,
+                        color = primaryLight,
+                    )
+                    Text(
+                        text = descriptions[index],
+                        style = MaterialTheme.typography.bodySmall,
+                        color = primaryLight,
+                        modifier = Modifier
+                    )
+                    Text(
+                        text = "Click here for this deal",
+                        style = MaterialTheme.typography.bodySmall,
+                        color = primaryLight,
+                        modifier = Modifier
+                            .clickable { openUrl(links[index]) }
+                    )
+                }
+                Spacer(modifier = Modifier
+                    .background(primaryDark)
+                    .height(20.dp)
                 )
             }
         }
@@ -105,3 +135,5 @@ class ScrollingFragment : Fragment() {
         startActivity(intent)
     }
 }
+
+
