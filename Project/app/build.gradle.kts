@@ -47,6 +47,7 @@ android {
     }
 }
 
+
 dependencies {
 
     implementation(libs.androidx.material3.android)
@@ -55,10 +56,11 @@ dependencies {
     implementation(composeBom)
     androidTestImplementation(composeBom)
 
-    implementation("androidx.compose.material3:material3")
 
-    implementation(platform("com.google.firebase:firebase-bom:32.8.1"))
-    implementation("com.google.firebase:firebase-auth")
+
+    implementation("androidx.compose.material3:material3")
+    implementation(libs.firebase.bom)
+    implementation("com.google.firebase:firebase-auth:23.0.0")
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
