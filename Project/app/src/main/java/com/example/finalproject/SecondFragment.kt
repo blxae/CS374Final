@@ -18,6 +18,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.ComposeView
 import androidx.compose.ui.unit.dp
@@ -49,36 +50,13 @@ class SecondFragment : Fragment() {
     @Composable
     fun ScrollingScreen(){
         val titles = listOf(
-            "",
-            "",
-            "",
-            "",
-            "",
+            "NYC Homeless or At-Risk of Homelessness Emergency Call Line",
+            "NYC Department of Homeless Services (DHS)"
         )
 
-        val addresses = listOf(
-            "",
-            "",
-        )
-
-        val resources = listOf(
-            "",
-            "",
-            "",
-
-        )
-
-        val links = listOf(
-            "https://www.cvs.com/",
-            "https://www.target.com/",
-            "https://www.7-eleven.com/",
-            "https://www.aldi.us/",
-            "https://www.ihop.com/en",
-            "https://www.macys.com/",
-            "https://new.mta.info/",
-            "https://www.planetfitness.com/",
-            "https://www.shoppersfood.com/",
-            "https://www.walgreens.com/",
+        val numbers = listOf(
+            "311",
+            ""
         )
 
         LazyColumn(
@@ -90,6 +68,7 @@ class SecondFragment : Fragment() {
                 val index = titles.indexOf(title)
 
                 Column(
+                    horizontalAlignment = Alignment.CenterHorizontally,
                     modifier = Modifier
                         .background(
                             color = primaryContainerLight,
@@ -103,23 +82,16 @@ class SecondFragment : Fragment() {
                         color = primaryLight,
                     )
                     Text(
-                        text = addresses[index],
+                        text = numbers[index],
                         style = MaterialTheme.typography.bodySmall,
                         color = primaryLight,
                         modifier = Modifier
-                    )
-                    Text(
-                        text = resources[index],
-                        style = MaterialTheme.typography.bodySmall,
-                        color = primaryLight,
-                        modifier = Modifier
-                    )
-                    Text(
-                        text = "Click here for this deal",
-                        style = MaterialTheme.typography.bodySmall,
-                        color = primaryLight,
-                        modifier = Modifier
-                            .clickable { openUrl(links[index]) }
+                            .background(
+                                color = primaryDark,
+                                shape = RoundedCornerShape(20.dp)
+                            )
+                            .clickable { openUrl(numbers[index]) }
+                            .padding(8.dp)
                     )
                 }
                 Spacer(modifier = Modifier

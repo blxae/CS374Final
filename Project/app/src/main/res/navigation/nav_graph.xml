@@ -20,6 +20,12 @@
         <action
             android:id="@+id/action_FirstFragment_to_LoginFragment"
             app:destination="@id/LoginFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_ShelterFragment"
+            app:destination="@id/SheltersFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_MapFragment"
+            app:destination="@id/MapFragment" />
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"
@@ -61,6 +67,26 @@
 
         <action
             android:id="@+id/action_EditFragment_to_MainFragment"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/SheltersFragment"
+        android:name="com.example.finalproject.SheltersFragment"
+        android:label="@string/shelter_fragment_label"
+        tools:layout="@layout/fragment_shelters">
+
+        <action
+            android:id="@+id/action_ShelterFragment_to_MainFragment"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/MapFragment"
+        android:name="com.example.finalproject.BathroomFragment"
+        android:label="@string/map_fragment_label"
+        tools:layout="@layout/fragment_bathroom">
+
+        <action
+            android:id="@+id/action_Map_Fragment_to_MainFragment"
             app:destination="@id/FirstFragment" />
     </fragment>
 
