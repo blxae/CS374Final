@@ -14,9 +14,10 @@
     <string name="street">street</string>
     <string name="description">description</string>
     <string name="contact">contact</string>
-    <string name="emergency">emergency</string>
+    <string name="Emergency">Emergency</string>
     <string name="Discounts">discounts</string>
     <string name="HomeLessAid">Homeless Aid</string>
+
     <string name="mapIntro">This is a map of local public restrooms.</string>
     <string name="lorem_ipsum">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris
@@ -164,4 +165,6 @@
         "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
         "when a user tries to pick up one of cards.\n\n"
     </string>
+    <string name="main_menu">main menu</string>
+    <string name="arrow"><![CDATA[<]]></string>
 </resources>
