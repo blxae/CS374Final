@@ -1,4 +1,5 @@
 package com.example.finalproject
+
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
@@ -25,7 +26,12 @@ import androidx.compose.ui.unit.dp
 import androidx.fragment.app.Fragment
 
 
-class ScrollingFragment : Fragment() {
+/**
+ * A simple [Fragment] subclass.
+ * Use the [SheltersFragment.newInstance] factory method to
+ * create an instance of this fragment.
+ */
+class SheltersFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -48,42 +54,31 @@ class ScrollingFragment : Fragment() {
     @Composable
     fun ScrollingScreen(){
         val titles = listOf(
-            "CVS: 50% off all deodorants May 15th-20th.",
-            "Target: Buy One Get One Free on Oatmeal",
-            "7-11: 15% off water cases",
-            "Aldi: Everyday low prices.",
-            "iHop: Join iHop rewards today!",
-            "Macy's: Sale on basics",
-            "MTA: Discount on MetroCards",
-            "Planet Fitness: Join today!",
-            "Shoppers savings",
-            "Walgreens: $2 off bath tissue"
+            "The Bowery Mission - Tribeca Campus",
+            "Coalition for the Homeless",
+            "Project Renewal Third Street Men's Shelter",
+            "Covenant House New York"
         )
 
-        val descriptions = listOf(
-            "Happy Spring! CVS will be offering 50% off all deodorant products with a purchase of $5 or more.",
-            "Looking for a healthy breakfast option for the whole family? From now until June 1st, when you buy one box of oatmeal, get the second one FREE!",
-            "This deal applies with a purchase of $10 or more. Get Dasani or Aquafina water cases 15% off!",
-            "Get ready-to-eat meals for as low as $5 from now until the end of the season. Feed the whole family!",
-            "Enjoy daily specials, with entrees starting at just $6. Get 20% off your first online order with the code IHOP20.",
-            "From now until June 1st, save big on basics! Shirts and blouses up to 20% off. Shorts and trousers up to 25% off.",
-            "Get a MetroCard this season! Now when you swipe 15 times in one week with the same card, you ride free for the rest of the week.",
-            "Join today for just $10 and get two free months of membership! Valid until September. Enjoy our facilities including state-of-the-art equipment, showers, and locker rooms.",
-            "This summer, enjoy savings on basic hygiene items. Get 15% off period products from now until July 30th.",
-            "In the month of May, when you make a purchase of $3 or more, get $2 off bath tissue. Good for up to 10 uses."
+        val addresses = listOf(
+            "90 Lafayette Street, New York, NY, 10013",
+            "129 Fulton St, New York, NY, 10038",
+            "8 E 3rd St #8908, New York, NY 10003",
+            "460 West 41st St, New York, NY 10036"
+        )
+
+        val resources = listOf(
+            "Provides: food, clothing, meals, housing support, shower facilities, hygiene support",
+            "Provides: food, clothing, housing, eviction assistance, domestic violence support",
+            "Provides: housing support, employment services, healthcare assistance",
+            "Provides: housing, health services, LGBTQ+ support, mental health resources"
         )
 
         val links = listOf(
-            "https://www.cvs.com/",
-            "https://www.target.com/",
-            "https://www.7-eleven.com/",
-            "https://www.aldi.us/",
-            "https://www.ihop.com/en",
-            "https://www.macys.com/",
-            "https://new.mta.info/",
-            "https://www.planetfitness.com/",
-            "https://www.shoppersfood.com/",
-            "https://www.walgreens.com/",
+            "https://www.bowery.org/",
+            "https://www.coalitionforthehomeless.org/",
+            "https://www.projectrenewal.org/",
+            "https://ny.covenanthouse.org/"
         )
 
         LazyColumn(
@@ -109,17 +104,30 @@ class ScrollingFragment : Fragment() {
                         color = primaryLight,
                     )
                     Text(
-                        text = descriptions[index],
+                        text = addresses[index],
                         style = MaterialTheme.typography.bodySmall,
                         color = primaryLight,
                         modifier = Modifier
+                            .padding(8.dp)
                     )
                     Text(
-                        text = "Click here for this deal",
+                        text = resources[index],
                         style = MaterialTheme.typography.bodySmall,
                         color = primaryLight,
                         modifier = Modifier
+                            .padding(8.dp)
+                    )
+                    Text(
+                        text = "Visit website",
+                        style = MaterialTheme.typography.bodySmall,
+                        color = primaryLight,
+                        modifier = Modifier
+                            .background(
+                                color = primaryDark,
+                                shape = RoundedCornerShape(20.dp)
+                            )
                             .clickable { openUrl(links[index]) }
+                            .padding(8.dp)
                     )
                 }
                 Spacer(modifier = Modifier
@@ -137,5 +145,3 @@ class ScrollingFragment : Fragment() {
         startActivity(intent)
     }
 }
-
-

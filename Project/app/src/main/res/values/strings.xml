@@ -7,6 +7,8 @@
     <string name="third_fragment_label">Discounts</string>
     <string name="login_fragment_label">Login</string>
     <string name="edit_fragment_label">Submit</string>
+    <string name="shelter_fragment_label">Shelters</string>
+    <string name="map_fragment_label">Bathrooms</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
     <string name="resources">resources</string>
