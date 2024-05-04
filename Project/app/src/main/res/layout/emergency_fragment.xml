@@ -18,7 +18,7 @@
         android:id="@+id/Emergency"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/Emergency"
+        android:text="@string/emergency"
         android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
